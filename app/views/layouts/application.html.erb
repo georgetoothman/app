@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="bio">
+      <h1>George Edward Toothman</h1>
+      <h4><a href="https://twetch.app/u/428" class="twetch">Twetch</a></h4>
+      <h4><a href="+14122046291" class="twetch">Google Voice +1 (412) 204-6291</a></h4>
+      <div class="button">
+          <div class="money-button"
+            data-label="Paymail"
+            data-to='georgetoothman@moneybutton.com'
+            data-amount='0.09'
+            data-currency='USD'
+            data-op-return="website"
+            data-success-message="Success"
+          </div>
+        </div>
+      </div>
+    <script type="text/javascript" src="https://unpkg.com/bsv@0.26.4/bsv.min.js"></script>
+    <script src="https://www.moneybutton.com/moneybutton.js"></script>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
